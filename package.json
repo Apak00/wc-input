@@ -1,0 +1,11 @@
+{
+  "name": "test-wc",
+  "version": "0.0.3",
+  "description": "",
+  "main": "test-wc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
