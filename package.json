@@ -1,6 +1,6 @@
 {
-  "name": "test-wc",
-  "version": "0.0.3",
+  "name": "adesso-pagination",
+  "version": "0.0.4",
   "description": "",
   "main": "test-wc.js",
   "scripts": {
