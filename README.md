@@ -11,6 +11,12 @@ Feel free to make your "Pull Request" 🏆
   `npm install validator --save`
 
   # usage:
+  first include script to your js or html file
+
+  ```
+    import "adesso-input";
+  ```
+  then in your html or jsx
   ```
   <adesso-input
     label="Email"
