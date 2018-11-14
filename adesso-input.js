@@ -88,8 +88,8 @@ import validator from "validator";
                     const value = e.target.value;
                     const containerClassList = this.shadowRoot.querySelector(".container").classList;
                     const labelElementClassList = this.shadowRoot.querySelector(".label").classList;
-    
-    
+                    
+                    
                     if (value) {
                         labelElementClassList.add("holdTight");
                         containerClassList.add("hasText");
@@ -98,12 +98,12 @@ import validator from "validator";
                         labelElementClassList.remove("holdTight");
                         containerClassList.remove("hasText");
                     }
-    
+                    
                     if (!this.invalid && this.validation(value)) {
                         containerClassList.remove("invalid");
                     } else {
                         containerClassList.add("invalid");
-                        this.shadowRoot.querySelector("input").removeEventListener("change", this.onInputChange);
+                        this.shadowRoot.querySelector("input").removeEventListener("blur", this.onInputChange);
                         this.shadowRoot.querySelector("input").addEventListener("keyup", this.onInputChange);
                     }
                 }
@@ -118,7 +118,7 @@ import validator from "validator";
         init() {
             const inputCopy = document.importNode(inputTemplate, true).content;
             this.shadowRoot.appendChild(inputCopy);
-            this.shadowRoot.querySelector("input").addEventListener("change", this.onInputChange);
+            this.shadowRoot.querySelector("input").addEventListener("blur", this.onInputChange);
         }
         
         
