@@ -7,11 +7,13 @@ Feel free to make your "Pull Request" 🏆
   `npm install adesso-input`
 
   # usage:
-  `<adesso-input`
-    `label="Email"`
-    `type="email"`
-    `animated`
-    `validation-rules="email,required">`
-      `<i slot="rightIcon" className="fas fa-dragon"/>
-  `</adesso-input>`
+  ```
+  <adesso-input
+    label="Email"
+    type="email"
+    animated
+    validation-rules="email,required">
+      <i slot="rightIcon" className="fas fa-dragon"/>
+  </adesso-input>
+  ```
 
