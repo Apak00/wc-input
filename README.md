@@ -4,7 +4,11 @@ A Web Component for input field.
 Feel free to make your "Pull Request" 🏆
 
   # installation:
-  `npm install adesso-input`
+  `npm install adesso-input --save`
+
+  To use this web component, you need to install "validator.js" aswell. If you dont already have it
+
+  `npm install validator --save`
 
   # usage:
   ```

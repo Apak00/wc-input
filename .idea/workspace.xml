@@ -42,7 +42,7 @@
         <counts>
           <entry key="js" value="574" />
           <entry key="json" value="78" />
-          <entry key="md" value="38" />
+          <entry key="md" value="218" />
           <entry key="txt" value="16" />
         </counts>
       </usages-collector>
@@ -51,7 +51,7 @@
           <entry key="HTML" value="23" />
           <entry key="JSON" value="78" />
           <entry key="JavaScript" value="551" />
-          <entry key="PLAIN_TEXT" value="54" />
+          <entry key="PLAIN_TEXT" value="234" />
         </counts>
       </usages-collector>
     </session>
@@ -70,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+            <state relative-caret-position="135">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -293,7 +293,7 @@
       <workItem from="1541423141745" duration="1241000" />
       <workItem from="1541430429001" duration="600000" />
       <workItem from="1542008514854" duration="4017000" />
-      <workItem from="1542203696751" duration="3803000" />
+      <workItem from="1542203696751" duration="4083000" />
     </task>
     <task id="LOCAL-00001" summary="s">
       <created>1542012340957</created>
@@ -330,11 +330,25 @@
       <option name="project" value="LOCAL" />
       <updated>1542209028619</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="readme">
+      <created>1542209147421</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1542209147421</updated>
+    </task>
+    <task id="LOCAL-00007" summary="readme">
+      <created>1542209264934</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1542209264934</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11523000" />
+    <option name="totallyTimeSpent" value="11803000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -373,13 +387,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Downloads/progressbar/progressbar.js" />
-    <entry file="file://$PROJECT_DIR$/adesso-input.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2710">
-          <caret line="213" selection-start-line="213" selection-end-line="213" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -387,10 +394,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/adesso-input.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2710">
+          <caret line="213" selection-start-line="213" selection-end-line="213" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
