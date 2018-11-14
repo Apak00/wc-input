@@ -1,1 +1,1 @@
-# adesso-pagination-wc
+# adesso-input
