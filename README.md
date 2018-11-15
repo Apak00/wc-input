@@ -27,3 +27,12 @@ Feel free to make your "Pull Request" 🏆
   </adesso-input>
   ```
 
+  ## Attributes:
+
+  | Attribute | Description | type | default| required |
+  | --- | --- | --- | --- | --- |
+  | `label` | label above input field | String | none | no |
+  | `type` | Input type | String | none | yes |
+  | `animated` | Input type | Boolean | false | no |
+  | `animated` | Input type | Boolean | false | no |
+
