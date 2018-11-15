@@ -37,5 +37,5 @@ Feel free to make your "Pull Request" 🏆
   | `invalid` | set this as input exptected to be invalid | Boolean | false | no |
   | `minlenght` | minimum number of character for validation | String | none | no |
   | `maxlength` | maximum number of character enabled | String | none | no |
-  | `validation-rules` | put your validation rules as a string added with comma variations: `email`,`required`,`alpha`,`minlength` | String | none | no |
+  | `validation-rules` | put your validation rules as a string added with comma, variations: `email`,`required`,`alpha`,`minlength` | String | none | no |
 
