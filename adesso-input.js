@@ -153,6 +153,13 @@ import validator from "validator";
                 }
             });
             
+            Object.defineProperty(this, "validationRules", {
+                configurable: true,
+                enumerable: true,
+                writable: true,
+                value: [],
+            });
+            
             this.attachShadow({mode: "open"});
             
             this.init();
@@ -166,29 +173,28 @@ import validator from "validator";
         }
         
         validation(value) {
-            let errorMessage = [];
-            if (this.validationRules) {
-                this.validationRules.split(",").forEach(rule => {
-                    switch (true) {
-                        case (rule === "required" && (!value)) :
-                            errorMessage.push("Cannot be empty");
-                            break;
-                        case (rule === "email" && !validator.isEmail(value)):
-                            errorMessage.push("Please enter a valid email address");
-                            break;
-                        case (rule === "minlength" && !validator.isLength(value, {min: this.minlength})):
-                            errorMessage.push("Cannot be less than " + this.minlength + " characters");
-                            break;
-                        case (rule === "alpha" && !validator.isAlpha(value, "tr-TR")):
-                            errorMessage.push("Must contain only letters");
-                            break;
-                    }
-                });
-                this.shadowRoot.querySelector(".message").textContent = errorMessage[0];
-            }
-            console.log(errorMessage);
+            let errorKey = undefined;
+            let shouldError = this.validationRules.some(rule => {
+                switch (true) {
+                    case (rule === "required" && (!value)):
+                        errorKey = "required";
+                        return true;
+                    case (rule === "email" && !validator.isEmail(value)):
+                        errorKey = "email";
+                        return true;
+                    case (rule === "minlength" && !validator.isLength(value, {min: this.minlength})):
+                        errorKey = "minlength";
+                        return true;
+                    case (rule === "alpha" && !validator.isAlpha(value, this.alpha)):
+                        errorKey = "alpha";
+                        return true;
+                    default:
+                        return false;
+                }
+            });
             
-            return (errorMessage.length === 0);
+            this.setAttribute("errorkey", errorKey);
+            return !shouldError;
         }
         
         
@@ -198,22 +204,33 @@ import validator from "validator";
                 case "label":
                     this.shadowRoot.querySelector(".label").textContent = this.label;
                     break;
+                case "maxlength":
+                    this.shadowRoot.querySelector("input").maxLength = this.maxlength;
+                    break;
+                case "required":
+                    this.validationRules.push("required");
+                    break;
                 case "type":
                     this.shadowRoot.querySelector("input").type = this.type;
+                    this.validationRules.push(this.type);
                     break;
                 case "animated":
                     this.shadowRoot.querySelector(".label").classList.remove("holdTight");
                     break;
-                case "maxlength":
-                    this.shadowRoot.querySelector("input").maxLength = this.maxlength;
+                case "alpha":
+                    this.validationRules.push("alpha");
                     break;
+                case "minlength":
+                    this.validationRules.push(newValue ? "minlength" : null);
+                    break;
+                
                 default:
                     break;
             }
         }
         
         static get observedAttributes() {
-            return ["label", "type", "pattern", "invalid", "valid", "validation-rules", "animated", "minlength", "maxlength"];
+            return ["alpha", "animated", "invalid", "label", "maxlength", "minlength", "required", "type",];
         }
         
         get label() {
@@ -240,14 +257,6 @@ import validator from "validator";
             this.setAttribute("invalid", newValue);
         }
         
-        get validationRules() {
-            return this.getAttribute("validation-rules");
-        }
-        
-        set validationRules(newValue) {
-            this.setAttribute("validation-rules", newValue);
-        }
-        
         get animated() {
             return this.getAttribute("animated");
         }
@@ -271,13 +280,23 @@ import validator from "validator";
         set maxlength(newValue) {
             this.setAttribute("maxlength", newValue);
         }
-        get valid() {
-            return this.getAttribute("valid");
+        
+        get required() {
+            return this.getAttribute("required");
         }
         
-        set valid(newValue) {
-            this.setAttribute("valid", newValue);
+        set required(newValue) {
+            this.setAttribute("required", newValue);
         }
+        
+        get alpha() {
+            return this.getAttribute("alpha");
+        }
+        
+        set alpha(newValue) {
+            this.setAttribute("alpha", newValue);
+        }
+        
         
     }
     

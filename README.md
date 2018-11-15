@@ -18,13 +18,16 @@ Feel free to make your "Pull Request" 🏆
   ```
   then in your html or jsx
   ```
-  <adesso-input
-    label="Email"
-    type="email"
-    animated
-    validation-rules="email,required">
+    <adesso-input 
+        required
+        type="email"
+        label="label"
+        animated
+        minlength="5"
+        maxlength="20"
+        alpha="tr-TR">
       <i slot="rightIcon" className="fas fa-dragon"/>
-  </adesso-input>
+    </adesso-input>
   ```
   
 ![](input_field_gif.gif)
@@ -33,11 +36,13 @@ Feel free to make your "Pull Request" 🏆
 
   | Attribute | Description | type | default| required |
   | --- | --- | --- | --- | --- |
-  | `label` | label above input field | String | none | no |
-  | `type` | Input type | String | none | yes |
+  | `alpha` | language code and alpha character validation | String | none | no |
   | `animated` | label is static if this attiribute does not exist | Boolean | false | no |
   | `invalid` | set this as input exptected to be invalid | Boolean | false | no |
-  | `minlenght` | minimum number of character for validation | String | none | no |
+  | `label` | label above input field | String | none | no |
   | `maxlength` | maximum number of character enabled | String | none | no |
-  | `validation-rules` | put your validation rules as a string added with comma, variations: `email`,`required`,`alpha`,`minlength` | String | none | no |
+  | `minlength` | minimum number of character for validation | String | none | no |
+  | `required` | empty validation | Boolean | none | no |
+  | `type` | Input type | String | none | yes |
+
 
