@@ -18,10 +18,11 @@
     <session id="-695761785">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="3" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -42,7 +43,7 @@
         <counts>
           <entry key="js" value="574" />
           <entry key="json" value="82" />
-          <entry key="md" value="707" />
+          <entry key="md" value="1151" />
           <entry key="txt" value="16" />
         </counts>
       </usages-collector>
@@ -51,6 +52,7 @@
           <entry key="HTML" value="23" />
           <entry key="JSON" value="82" />
           <entry key="JavaScript" value="551" />
+          <entry key="Markdown" value="444" />
           <entry key="PLAIN_TEXT" value="723" />
         </counts>
       </usages-collector>
@@ -61,7 +63,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adesso-input.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="691">
+            <state relative-caret-position="447">
               <caret line="285" selection-start-line="285" selection-end-line="285" />
             </state>
           </provider>
@@ -70,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="29" column="6" lean-forward="true" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+            <state relative-caret-position="367">
+              <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -80,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="23" lean-forward="true" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+              <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -184,7 +186,8 @@
       <workItem from="1541430429001" duration="600000" />
       <workItem from="1542008514854" duration="4017000" />
       <workItem from="1542203696751" duration="4414000" />
-      <workItem from="1542274760301" duration="1932000" />
+      <workItem from="1542274760301" duration="2122000" />
+      <workItem from="1542282045555" duration="622000" />
     </task>
     <task id="LOCAL-00001" summary="s">
       <created>1542012340957</created>
@@ -249,11 +252,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542209642314</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="readme">
+      <created>1542281811810</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1542281811810</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14066000" />
+    <option name="totallyTimeSpent" value="14878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -295,21 +305,21 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="23" lean-forward="true" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/adesso-input.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
+        <state relative-caret-position="447">
           <caret line="285" selection-start-line="285" selection-end-line="285" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="29" column="6" lean-forward="true" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+        <state relative-caret-position="367">
+          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
         </state>
       </provider>
     </entry>
