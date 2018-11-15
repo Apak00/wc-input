@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="66220fc4-e4f4-4c45-9a2e-89f3f5d6b1ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,10 +29,12 @@
           <entry key="js" value="3" />
           <entry key="json" value="1" />
           <entry key="md" value="1" />
+          <entry key="png" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Image" value="5" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="3" />
           <entry key="PLAIN_TEXT" value="1" />
@@ -43,7 +44,7 @@
         <counts>
           <entry key="js" value="574" />
           <entry key="json" value="82" />
-          <entry key="md" value="1151" />
+          <entry key="md" value="1157" />
           <entry key="txt" value="16" />
         </counts>
       </usages-collector>
@@ -52,7 +53,7 @@
           <entry key="HTML" value="23" />
           <entry key="JSON" value="82" />
           <entry key="JavaScript" value="551" />
-          <entry key="Markdown" value="444" />
+          <entry key="Markdown" value="450" />
           <entry key="PLAIN_TEXT" value="723" />
         </counts>
       </usages-collector>
@@ -72,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+            <state relative-caret-position="247">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -187,7 +188,7 @@
       <workItem from="1542008514854" duration="4017000" />
       <workItem from="1542203696751" duration="4414000" />
       <workItem from="1542274760301" duration="2122000" />
-      <workItem from="1542282045555" duration="622000" />
+      <workItem from="1542282045555" duration="1173000" />
     </task>
     <task id="LOCAL-00001" summary="s">
       <created>1542012340957</created>
@@ -259,17 +260,23 @@
       <option name="project" value="LOCAL" />
       <updated>1542281811810</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="readme">
+      <created>1542282675197</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1542282675197</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14878000" />
+    <option name="totallyTimeSpent" value="15429000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49879518" visible="true" weight="0.24947146" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49879518" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="1" sideWeight="0.50120485" side_tool="true" weight="0.24947146" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -281,7 +288,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -316,10 +323,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Screen Shot 2018-11-15 at 14.53.46.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+        <state relative-caret-position="247">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
