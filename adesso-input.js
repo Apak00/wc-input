@@ -4,7 +4,7 @@ import validator from "validator";
     const inputTemplate = document.createElement("template");
     inputTemplate.innerHTML = `
     <style>
-        :host{
+        :host {
             margin: 20px;
             flex:1;
         }
@@ -19,7 +19,7 @@ import validator from "validator";
             border-bottom: #1976d2 2px solid;
             color: #1976d2;
         }
-        .floatingInputContainer{
+        .floatingInputContainer {
             display:flex;
             flex-direction: row;
             flex-basis: 70%;
@@ -49,13 +49,57 @@ import validator from "validator";
             border: none;
             outline: none;
         }
+        .message {
+            position: absolute;
+            opacity: 0;
+            bottom: -20px;
+            left: 10px;
+            color: inherit;
+            font-size: 12px;
+        }
+        .invalid > .message {
+            opacity: 1;
+            -webkit-animation: fadein 500ms ease; /* Safari, Chrome and Opera > 12.1 */
+            -moz-animation: fadein 500ms ease; /* Firefox < 16 */
+            -ms-animation: fadein 500ms ease; /* Internet Explorer */
+            -o-animation: fadein 500ms ease; /* Opera < 12.1 */
+            animation: fadein 500ms ease;
+        }
+        @keyframes fadein {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY{-20px}; }
+        }
+        
+        /* Firefox < 16 */
+        @-moz-keyframes fadein {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY{-20px}; }
+        }
+        
+        /* Safari, Chrome and Opera > 12.1 */
+        @-webkit-keyframes fadein {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY{-20px}; }
+        }
+        
+        /* Internet Explorer */
+        @-ms-keyframes fadein {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY{-20px}; }
+        }
+        
+        /* Opera < 12.1 */
+        @-o-keyframes fadein {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY{-20px}; }
+        }
         ::slotted(*) {
             flex: 0.15;
             color: inherit;
             padding: 5px;
             text-align: center;
         }
-        .hasText{
+        .hasText {
             color: green;
             border-color: green;
         }
@@ -70,6 +114,7 @@ import validator from "validator";
             <input id="input" name="input" class="input"/>
             <label class="label holdTight" for="input"></label>
         </div>
+        <span class="message"></span>
         <slot class="rightIcon" name="rightIcon"></slot>
     </div>
     `;
@@ -84,7 +129,6 @@ import validator from "validator";
                 enumerable: true,
                 writable: true,
                 value: (e) => {
-                    console.log("hey");
                     const value = e.target.value;
                     const containerClassList = this.shadowRoot.querySelector(".container").classList;
                     const labelElementClassList = this.shadowRoot.querySelector(".label").classList;
@@ -121,21 +165,26 @@ import validator from "validator";
             this.shadowRoot.querySelector("input").addEventListener("blur", this.onInputChange);
         }
         
-        
-        
         validation(value) {
             let errorMessage = [];
             if (this.validationRules) {
                 this.validationRules.split(",").forEach(rule => {
                     switch (true) {
                         case (rule === "required" && (!value)) :
-                            errorMessage.push("This field cannot be empty");
+                            errorMessage.push("Cannot be empty");
                             break;
                         case (rule === "email" && !validator.isEmail(value)):
                             errorMessage.push("Please enter a valid email address");
                             break;
+                        case (rule === "minlength" && !validator.isLength(value, {min: this.minlength})):
+                            errorMessage.push("Cannot be less than " + this.minlength + " characters");
+                            break;
+                        case (rule === "alpha" && !validator.isAlpha(value, "tr-TR")):
+                            errorMessage.push("Must contain only letters");
+                            break;
                     }
                 });
+                this.shadowRoot.querySelector(".message").textContent = errorMessage[0];
             }
             console.log(errorMessage);
             
@@ -150,13 +199,13 @@ import validator from "validator";
                     this.shadowRoot.querySelector(".label").textContent = this.label;
                     break;
                 case "type":
-                    if (newValue === "date") {
-                        this.shadowRoot.querySelector("label").textContent = "";
-                    }
                     this.shadowRoot.querySelector("input").type = this.type;
                     break;
                 case "animated":
                     this.shadowRoot.querySelector(".label").classList.remove("holdTight");
+                    break;
+                case "maxlength":
+                    this.shadowRoot.querySelector("input").maxLength = this.maxlength;
                     break;
                 default:
                     break;
@@ -164,7 +213,7 @@ import validator from "validator";
         }
         
         static get observedAttributes() {
-            return ["label", "type", "pattern", "invalid", "validation-rules", "animated"];
+            return ["label", "type", "pattern", "invalid", "valid", "validation-rules", "animated", "minlength", "maxlength"];
         }
         
         get label() {
@@ -205,6 +254,29 @@ import validator from "validator";
         
         set animated(newValue) {
             this.setAttribute("animated", newValue);
+        }
+        
+        get minlength() {
+            return this.getAttribute("minlength");
+        }
+        
+        set minlength(newValue) {
+            this.setAttribute("minlength", newValue);
+        }
+        
+        get maxlength() {
+            return this.getAttribute("maxlength");
+        }
+        
+        set maxlength(newValue) {
+            this.setAttribute("maxlength", newValue);
+        }
+        get valid() {
+            return this.getAttribute("valid");
+        }
+        
+        set valid(newValue) {
+            this.setAttribute("valid", newValue);
         }
         
     }
