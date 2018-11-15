@@ -26,6 +26,8 @@ Feel free to make your "Pull Request" 🏆
       <i slot="rightIcon" className="fas fa-dragon"/>
   </adesso-input>
   ```
+  
+![](input_field_gif.gif)
 
   ## Attributes:
 
