@@ -11,12 +11,12 @@ Feel free to make your "Pull Request" 🏆
   `npm install validator --save`
 
   ### usage:
-  first include script to your js or html file
+  first import script to your page
 
   ```
     import "adesso-input";
   ```
-  then in your html or jsx
+  then in your markup
   ```
     <adesso-input 
         required
@@ -44,5 +44,14 @@ Feel free to make your "Pull Request" 🏆
   | `minlength` | minimum number of character for validation | String | none | no |
   | `required` | empty validation | Boolean | none | no |
   | `type` | Input type | String | none | yes |
+  
+  ## Future:
+  
+  - [ ] Notify parent component about "errorkey". Possible solition would be firing a custom event
+ 
+    
+  ## Team:
+  
+    @cagdascan
 
 
