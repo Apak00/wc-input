@@ -49,9 +49,3 @@ Feel free to make your "Pull Request" 🏆
   
   - [ ] Notify parent component about "errorkey". Possible solition would be firing a custom event
  
-    
-  ## Team:
-  
-    @cagdascan
-
-
