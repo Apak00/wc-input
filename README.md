@@ -36,16 +36,23 @@ Feel free to make your "Pull Request" 🏆
 
   | Attribute | Description | type | default| required |
   | --- | --- | --- | --- | --- |
-  | `alpha` | language code and alpha character validation | String | none | no |
+  | `alpha` | alpha character validation | Boolean | false | no |
   | `animated` | label is static if this attiribute does not exist | Boolean | false | no |
+  | `error-message` | message to show when error occurs | String | false | no |
   | `invalid` | set this as input exptected to be invalid | Boolean | false | no |
-  | `label` | label above input field | String | none | no |
+  | `label` | label above input field | String | none | no |  
+  | `lang` | language code | String | en-US | yes |
   | `maxlength` | maximum number of character enabled | String | none | no |
   | `minlength` | minimum number of character for validation | String | none | no |
-  | `required` | empty validation | Boolean | none | no |
-  | `type` | Input type | String | none | yes |
+  | `pattern` | patter to mask user input "A" for alpha chars "1" for numbers | String | none | no |
+  | `placeholder` | placeholder | String | none | no |
+  | `regex` | regex to validate against | String | none | no |
+  | `required` | validation for empty | Boolean | none | no |
+  | `type` | input type | String | none | yes |
+  | `value` | input value for controlled input. event fired on input change is "textChanged" | String | none | no |
   
   ## Future:
   
   - [x] Notify parent component about "errorKey". Possible solition would be firing a custom event
-  - [ ] Add input mask for custom pattern.
+  - [x] Add input mask for custom pattern.
+  - [ ] Add more options for pattern and validation.

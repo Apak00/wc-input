@@ -124,31 +124,63 @@ import validator from "validator";
         constructor() {
             super();
             
-            Object.defineProperty(this, "onInputChange", {
-                configurable: true,
-                enumerable: true,
-                writable: true,
+            Object.defineProperty(this, "onValidate", {
                 value: (e) => {
                     const value = e.target.value;
                     const containerClassList = this.shadowRoot.querySelector(".container").classList;
                     const labelElementClassList = this.shadowRoot.querySelector(".label").classList;
-                    
-                    
                     if (value) {
                         labelElementClassList.add("holdTight");
                         containerClassList.add("hasText");
-                    }
-                    else {
+                    } else if (this.animated) {
                         labelElementClassList.remove("holdTight");
                         containerClassList.remove("hasText");
-                    }
+                    } else containerClassList.remove("hasText");
                     
                     if (!this.invalid && this.validation(value)) {
                         containerClassList.remove("invalid");
                     } else {
                         containerClassList.add("invalid");
-                        this.shadowRoot.querySelector("input").removeEventListener("blur", this.onInputChange);
-                        this.shadowRoot.querySelector("input").addEventListener("keyup", this.onInputChange);
+                        this.shadowRoot.querySelector("input").removeEventListener("blur", this.onValidate);
+                        this.shadowRoot.querySelector("input").addEventListener("keyup", this.onValidate);
+                    }
+                }
+            });
+            
+            Object.defineProperty(this, "onKeyUp", {
+                value: (e) => {
+                    if (this.value === e.target.value) {
+                        e.preventDefault();
+                        return false;
+                    }
+                    if (this.hasAttribute("value")) {
+                        const textChanged = new CustomEvent("textChanged", {detail: {value: e.target.value}});
+                        this.dispatchEvent(textChanged);
+                    } else {
+                        this.value = e.target.value;
+                    }
+                    
+                    
+                }
+            });
+            
+            Object.defineProperty(this, "onKeyPress", {
+                value: (e) => {
+                    let value = e.target.value;
+                    const key = e.key;
+                    const keyCode = e.keyCode;
+                    
+                    if (value.length === this.pattern.length) {
+                        e.preventDefault();
+                        return false;
+                    }
+                    if (this.pattern.charAt(value.length) === "A" && !validator.isAlpha(key, this.lang)) {
+                        e.preventDefault();
+                        return false;
+                    }
+                    else if (this.pattern.charAt(value.length) === "1" && !(keyCode > 48 && keyCode < 58)) {
+                        e.preventDefault();
+                        return false;
                     }
                 }
             });
@@ -169,7 +201,10 @@ import validator from "validator";
         init() {
             const inputCopy = document.importNode(inputTemplate, true).content;
             this.shadowRoot.appendChild(inputCopy);
-            this.shadowRoot.querySelector("input").addEventListener("blur", this.onInputChange);
+            const inputEl = this.shadowRoot.querySelector("input");
+            inputEl.addEventListener("blur", this.onValidate);
+            inputEl.addEventListener("keypress", this.onKeyPress);
+            inputEl.addEventListener("keyup", this.onKeyUp);
         }
         
         validation(value) {
@@ -185,8 +220,11 @@ import validator from "validator";
                     case (rule === "minlength" && !validator.isLength(value, {min: this.minlength})):
                         errorKey = "minlength";
                         return true;
-                    case (rule === "alpha" && !validator.isAlpha(value, this.alpha)):
+                    case (rule === "alpha" && !validator.isAlpha(value, this.lang)):
                         errorKey = "alpha";
+                        return true;
+                    case (rule === "regex" && !validator.matches(value, this.regex)):
+                        errorKey = "regex";
                         return true;
                     default:
                         return false;
@@ -225,17 +263,29 @@ import validator from "validator";
                 case "alpha":
                     this.validationRules.push("alpha");
                     break;
+                case "regex":
+                    this.validationRules.push("regex");
+                    break;
                 case "error-message":
                     this.shadowRoot.querySelector(".message").textContent = newValue;
                     break;
-                
+                case "placeholder":
+                    this.shadowRoot.querySelector("input").setAttribute("placeholder", newValue);
+                    break;
+                case "pattern":
+                    this.shadowRoot.querySelector("input").setAttribute("placeholder", newValue);
+                    break;
+                case "value":
+                    this.shadowRoot.querySelector("input").value = newValue;
+                    break;
                 default:
                     break;
             }
         }
         
         static get observedAttributes() {
-            return ["label", "required", "type", "invalid", "animated", "minlength", "maxlength", "alpha", "error-message"];
+            return ["alpha", "animated", "error-message", "invalid", "label", "lang", "minlength", "maxlength",
+                "pattern", "placeholder", "regex", "required", "type", "value",];
         }
         
         get label() {
@@ -300,6 +350,46 @@ import validator from "validator";
         
         set alpha(newValue) {
             this.setAttribute("alpha", newValue);
+        }
+        
+        get regex() {
+            return this.getAttribute("regex");
+        }
+        
+        set regex(newValue) {
+            this.setAttribute("regex", newValue);
+        }
+        
+        get value() {
+            return this.getAttribute("value");
+        }
+        
+        set value(newValue) {
+            this.setAttribute("value", newValue);
+        }
+        
+        get lang() {
+            return this.getAttribute("lang");
+        }
+        
+        set lang(newValue) {
+            this.setAttribute("lang", newValue);
+        }
+        
+        get pattern() {
+            return this.getAttribute("pattern");
+        }
+        
+        set pattern(newValue) {
+            this.setAttribute("pattern", newValue);
+        }
+        
+        get placeholder() {
+            return this.getAttribute("placeholder");
+        }
+        
+        set placeholder(newValue) {
+            this.setAttribute("placeholder", newValue);
         }
         
         
