@@ -193,10 +193,9 @@ import validator from "validator";
                 }
             });
             
-            if (errorKey) {
-                const errorEvent = new CustomEvent("errorEvent", {detail: {key: errorKey}});
-                this.dispatchEvent(errorEvent);
-            }
+            const errorEvent = new CustomEvent("errorEvent", {detail: {key: errorKey}});
+            this.dispatchEvent(errorEvent);
+            
             return !shouldError;
         }
         
@@ -301,14 +300,6 @@ import validator from "validator";
         
         set alpha(newValue) {
             this.setAttribute("alpha", newValue);
-        }
-        
-        get errorMessage() {
-            return this.getAttribute("error-message");
-        }
-        
-        set errorMessage(newValue) {
-            this.setAttribute("error-message", newValue);
         }
         
         

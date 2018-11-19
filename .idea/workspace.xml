@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="66220fc4-e4f4-4c45-9a2e-89f3f5d6b1ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/adesso-input.js" beforeDir="false" afterPath="$PROJECT_DIR$/adesso-input.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -45,9 +46,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="1000" />
+          <entry key="js" value="1028" />
           <entry key="json" value="82" />
-          <entry key="md" value="1522" />
+          <entry key="md" value="1529" />
           <entry key="txt" value="16" />
         </counts>
       </usages-collector>
@@ -55,8 +56,8 @@
         <counts>
           <entry key="HTML" value="23" />
           <entry key="JSON" value="82" />
-          <entry key="JavaScript" value="977" />
-          <entry key="Markdown" value="815" />
+          <entry key="JavaScript" value="1005" />
+          <entry key="Markdown" value="822" />
           <entry key="PLAIN_TEXT" value="723" />
         </counts>
       </usages-collector>
@@ -67,8 +68,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adesso-input.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="198" column="13" lean-forward="true" selection-start-line="194" selection-start-column="12" selection-end-line="198" selection-end-column="13" />
+            <state relative-caret-position="2083">
+              <caret line="309" lean-forward="true" selection-start-line="309" selection-end-line="309" />
             </state>
           </provider>
         </entry>
@@ -77,8 +78,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="750">
-                <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+              <first_editor relative-caret-position="517">
+                <caret line="48" column="2" lean-forward="true" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
               </first_editor>
               <second_editor />
             </state>
@@ -196,7 +197,7 @@
       <workItem from="1542274760301" duration="2122000" />
       <workItem from="1542282045555" duration="6473000" />
       <workItem from="1542349048819" duration="3480000" />
-      <workItem from="1542607560580" duration="694000" />
+      <workItem from="1542607560580" duration="1897000" />
     </task>
     <task id="LOCAL-00001" summary="s">
       <created>1542012340957</created>
@@ -279,7 +280,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24903000" />
+    <option name="totallyTimeSpent" value="26106000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -319,10 +320,10 @@
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Downloads/progressbar/progressbar.js" />
     <entry file="file://$PROJECT_DIR$/Screen Shot 2018-11-15 at 14.53.46.png" />
-    <entry file="file://$PROJECT_DIR$/adesso-input.js">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="198" column="13" lean-forward="true" selection-start-line="194" selection-start-column="12" selection-end-line="198" selection-end-column="13" />
+        <state relative-caret-position="15">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -334,17 +335,17 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="750">
-            <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+          <first_editor relative-caret-position="517">
+            <caret line="48" column="2" lean-forward="true" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/adesso-input.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        <state relative-caret-position="2083">
+          <caret line="309" lean-forward="true" selection-start-line="309" selection-end-line="309" />
         </state>
       </provider>
     </entry>

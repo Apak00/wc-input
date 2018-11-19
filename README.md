@@ -47,5 +47,5 @@ Feel free to make your "Pull Request" 🏆
   
   ## Future:
   
-  - [ ] Notify parent component about "errorkey". Possible solition would be firing a custom event
+  - [x] Notify parent component about "errorKey". Possible solition would be firing a custom event
  
