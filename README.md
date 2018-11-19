@@ -48,4 +48,4 @@ Feel free to make your "Pull Request" 🏆
   ## Future:
   
   - [x] Notify parent component about "errorKey". Possible solition would be firing a custom event
- 
+  - [ ] Add input mask for custom pattern.
