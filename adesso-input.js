@@ -193,7 +193,10 @@ import validator from "validator";
                 }
             });
             
-            this.setAttribute("errorkey", errorKey);
+            if (errorKey) {
+                const errorEvent = new CustomEvent("errorEvent", {detail: {key: errorKey}});
+                this.dispatchEvent(errorEvent);
+            }
             return !shouldError;
         }
         
@@ -201,11 +204,17 @@ import validator from "validator";
         attributeChangedCallback(name, oldValue, newValue) {
             console.log(`${name} changed from ${oldValue} to ${newValue}`);
             switch (name) {
+                case "animated":
+                    this.shadowRoot.querySelector(".label").classList.remove("holdTight");
+                    break;
                 case "label":
                     this.shadowRoot.querySelector(".label").textContent = this.label;
                     break;
                 case "maxlength":
                     this.shadowRoot.querySelector("input").maxLength = this.maxlength;
+                    break;
+                case "minlength":
+                    this.validationRules.push(newValue ? "minlength" : null);
                     break;
                 case "required":
                     this.validationRules.push("required");
@@ -214,14 +223,11 @@ import validator from "validator";
                     this.shadowRoot.querySelector("input").type = this.type;
                     this.validationRules.push(this.type);
                     break;
-                case "animated":
-                    this.shadowRoot.querySelector(".label").classList.remove("holdTight");
-                    break;
                 case "alpha":
                     this.validationRules.push("alpha");
                     break;
-                case "minlength":
-                    this.validationRules.push(newValue ? "minlength" : null);
+                case "error-message":
+                    this.shadowRoot.querySelector(".message").textContent = newValue;
                     break;
                 
                 default:
@@ -230,7 +236,7 @@ import validator from "validator";
         }
         
         static get observedAttributes() {
-            return ["alpha", "animated", "invalid", "label", "maxlength", "minlength", "required", "type",];
+            return ["label", "required", "type", "invalid", "animated", "minlength", "maxlength", "alpha", "error-message"];
         }
         
         get label() {
@@ -295,6 +301,14 @@ import validator from "validator";
         
         set alpha(newValue) {
             this.setAttribute("alpha", newValue);
+        }
+        
+        get errorMessage() {
+            return this.getAttribute("error-message");
+        }
+        
+        set errorMessage(newValue) {
+            this.setAttribute("error-message", newValue);
         }
         
         
