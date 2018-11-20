@@ -165,14 +165,16 @@ import validator from "validator";
             Object.defineProperty(this, "onKeyPress", {
                 value: (e) => {
                     const value = e.target.value;
+                    const valLength = value.length;
                     const key = e.key;
-                    const keyCode = e.keyCode;
+                    const keyCode = event.which || event.keyCode;
+                    const patternKey = this.pattern.charAt(valLength);
                     
-                    if (this.pattern.charAt(value.length) === "A" && !validator.isAlpha(key, this.lang)) {
+                    if (patternKey === "A" && !validator.isAlpha(key, this.lang)) {
                         e.preventDefault();
                         return false;
                     }
-                    else if (this.pattern.charAt(value.length) === "1" && !(keyCode > 48 && keyCode < 58)) {
+                    else if (patternKey === "1" && !(keyCode > 48 && keyCode < 58)) {
                         e.preventDefault();
                         return false;
                     }
@@ -181,19 +183,22 @@ import validator from "validator";
             
             Object.defineProperty(this, "onPaste", {
                 value: (e) => {
-                    const value = e.clipboardData.getData("Text");
-                    const valueLength = value.length;
+                    const cb = e.clipboardData.getData("Text");
+                    const cbLength = cb.length;
                     const patternLength = this.pattern.length;
-                    if (valueLength > patternLength)
-                        e.preventDefault();
+                    const valLength = e.target.value.length;
                     
-                    for (let i = 0; i < valueLength; i++) {
-                        const keyCode = value.charCodeAt(i);
-                        if (this.pattern.charAt(i) === "A" && !validator.isAlpha(value[i], this.lang)) {
+                    if (cbLength > (patternLength - valLength))
+                        e.preventDefault();
+                    for (let i = valLength; i < (valLength + cbLength); i++) {
+                        const keyCode = cb.charCodeAt(i - valLength);
+                        const patternKey = this.pattern.charAt(i);
+                        
+                        if (patternKey === "A" && !validator.isAlpha(cb[i - valLength], this.lang)) {
                             e.preventDefault();
                             return false;
                         }
-                        else if (this.pattern.charAt(i) === "1" && !(keyCode > 48 && keyCode < 58)) {
+                        else if (patternKey === "1" && !(keyCode > 48 && keyCode < 58)) {
                             e.preventDefault();
                             return false;
                         }
@@ -217,11 +222,16 @@ import validator from "validator";
         init() {
             const inputCopy = document.importNode(inputTemplate, true).content;
             this.shadowRoot.appendChild(inputCopy);
+        }
+        
+        connectedCallback() {
             const inputEl = this.shadowRoot.querySelector("input");
             inputEl.addEventListener("blur", this.onValidate);
             inputEl.addEventListener("keypress", this.onKeyPress);
-            inputEl.addEventListener("keyup", this.onKeyUp);
-            inputEl.addEventListener("paste", this.onPaste);
+            if (this.pattern) {
+                inputEl.addEventListener("keyup", this.onKeyUp);
+                inputEl.addEventListener("paste", this.onPaste);
+            }
         }
         
         validation(value) {
@@ -410,7 +420,6 @@ import validator from "validator";
         set placeholder(newValue) {
             this.setAttribute("placeholder", newValue);
         }
-        
         
     }
     
