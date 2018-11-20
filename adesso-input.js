@@ -120,7 +120,7 @@ import validator from "validator";
     `;
     
     
-    class AdessoInput extends HTMLDivElement {
+    class AdessoInput extends HTMLElement {
         constructor() {
             super();
             
@@ -423,5 +423,5 @@ import validator from "validator";
         
     }
     
-    customElements.define("adesso-input", AdessoInput, {extends: "div"})
+    customElements.define("adesso-input", AdessoInput)
 }());
