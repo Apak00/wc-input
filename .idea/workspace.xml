@@ -45,7 +45,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="1031" />
+          <entry key="js" value="1033" />
           <entry key="json" value="82" />
           <entry key="md" value="1960" />
           <entry key="txt" value="16" />
@@ -55,7 +55,7 @@
         <counts>
           <entry key="HTML" value="23" />
           <entry key="JSON" value="82" />
-          <entry key="JavaScript" value="1008" />
+          <entry key="JavaScript" value="1010" />
           <entry key="Markdown" value="1253" />
           <entry key="PLAIN_TEXT" value="723" />
         </counts>
@@ -67,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adesso-input.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1036">
-              <caret line="233" column="13" selection-start-line="233" selection-start-column="13" selection-end-line="233" selection-end-column="13" />
+            <state relative-caret-position="127">
+              <caret line="168" column="38" lean-forward="true" selection-start-line="168" selection-start-column="38" selection-end-line="168" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -189,7 +189,7 @@
       <workItem from="1542282045555" duration="6473000" />
       <workItem from="1542349048819" duration="3480000" />
       <workItem from="1542607560580" duration="5868000" />
-      <workItem from="1542703567625" duration="1142000" />
+      <workItem from="1542703567625" duration="1301000" />
     </task>
     <task id="LOCAL-00001" summary="s">
       <created>1542012340957</created>
@@ -272,7 +272,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31219000" />
+    <option name="totallyTimeSpent" value="31378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -336,8 +336,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adesso-input.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1036">
-          <caret line="233" column="13" selection-start-line="233" selection-start-column="13" selection-end-line="233" selection-end-column="13" />
+        <state relative-caret-position="127">
+          <caret line="168" column="38" lean-forward="true" selection-start-line="168" selection-start-column="38" selection-end-line="168" selection-end-column="38" />
         </state>
       </provider>
     </entry>

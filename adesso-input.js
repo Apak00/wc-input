@@ -167,7 +167,7 @@ import validator from "validator";
                     const value = e.target.value;
                     const valLength = value.length;
                     const key = e.key;
-                    const keyCode = event.which || event.keyCode;
+                    const keyCode = e.which || e.keyCode;
                     const patternKey = this.pattern.charAt(valLength);
                     
                     if (patternKey === "A" && !validator.isAlpha(key, this.lang)) {
