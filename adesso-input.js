@@ -227,9 +227,9 @@ import validator from "validator";
         connectedCallback() {
             const inputEl = this.shadowRoot.querySelector("input");
             inputEl.addEventListener("blur", this.onValidate);
-            inputEl.addEventListener("keypress", this.onKeyPress);
+            inputEl.addEventListener("keyup", this.onKeyUp);
             if (this.pattern) {
-                inputEl.addEventListener("keyup", this.onKeyUp);
+                inputEl.addEventListener("keypress", this.onKeyPress);
                 inputEl.addEventListener("paste", this.onPaste);
             }
         }
