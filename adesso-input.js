@@ -120,7 +120,7 @@ import validator from "validator";
     `;
     
     
-    class AdessoInput extends HTMLElement {
+    class AdessoInput extends HTMLDivElement {
         constructor() {
             super();
             
@@ -141,7 +141,6 @@ import validator from "validator";
                         containerClassList.remove("invalid");
                     } else {
                         containerClassList.add("invalid");
-                        this.shadowRoot.querySelector("input").removeEventListener("blur", this.onValidate);
                         this.shadowRoot.querySelector("input").addEventListener("keyup", this.onValidate);
                     }
                 }
@@ -152,8 +151,7 @@ import validator from "validator";
                     if (this.value === e.target.value) {
                         e.preventDefault();
                         return false;
-                    }
-                    if (this.hasAttribute("value")) {
+                    } else if (this.hasAttribute("value")) {
                         const textChanged = new CustomEvent("textChanged", {detail: {value: e.target.value}});
                         this.dispatchEvent(textChanged);
                     } else {
@@ -166,14 +164,10 @@ import validator from "validator";
             
             Object.defineProperty(this, "onKeyPress", {
                 value: (e) => {
-                    let value = e.target.value;
+                    const value = e.target.value;
                     const key = e.key;
                     const keyCode = e.keyCode;
                     
-                    if (value.length === this.pattern.length) {
-                        e.preventDefault();
-                        return false;
-                    }
                     if (this.pattern.charAt(value.length) === "A" && !validator.isAlpha(key, this.lang)) {
                         e.preventDefault();
                         return false;
@@ -181,6 +175,28 @@ import validator from "validator";
                     else if (this.pattern.charAt(value.length) === "1" && !(keyCode > 48 && keyCode < 58)) {
                         e.preventDefault();
                         return false;
+                    }
+                }
+            });
+            
+            Object.defineProperty(this, "onPaste", {
+                value: (e) => {
+                    const value = e.clipboardData.getData("Text");
+                    const valueLength = value.length;
+                    const patternLength = this.pattern.length;
+                    if (valueLength > patternLength)
+                        e.preventDefault();
+                    
+                    for (let i = 0; i < valueLength; i++) {
+                        const keyCode = value.charCodeAt(i);
+                        if (this.pattern.charAt(i) === "A" && !validator.isAlpha(value[i], this.lang)) {
+                            e.preventDefault();
+                            return false;
+                        }
+                        else if (this.pattern.charAt(i) === "1" && !(keyCode > 48 && keyCode < 58)) {
+                            e.preventDefault();
+                            return false;
+                        }
                     }
                 }
             });
@@ -205,6 +221,7 @@ import validator from "validator";
             inputEl.addEventListener("blur", this.onValidate);
             inputEl.addEventListener("keypress", this.onKeyPress);
             inputEl.addEventListener("keyup", this.onKeyUp);
+            inputEl.addEventListener("paste", this.onPaste);
         }
         
         validation(value) {
@@ -273,6 +290,8 @@ import validator from "validator";
                     this.shadowRoot.querySelector("input").setAttribute("placeholder", newValue);
                     break;
                 case "pattern":
+                    this.maxlength = this.pattern.length;
+                    this.minlength = this.pattern.length;
                     this.shadowRoot.querySelector("input").setAttribute("placeholder", newValue);
                     break;
                 case "value":
@@ -395,5 +414,5 @@ import validator from "validator";
         
     }
     
-    customElements.define("adesso-input", AdessoInput)
+    customElements.define("adesso-input", AdessoInput, {extends: "div"})
 }());

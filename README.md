@@ -18,16 +18,15 @@ Feel free to make your "Pull Request" 🏆
   ```
   then in your markup
   ```
-    <adesso-input 
+    <div
+        is="adesso-input"
         required
-        type="email"
+        type="text"
         label="label"
-        animated
-        minlength="5"
-        maxlength="20"
-        alpha="tr-TR">
-      <i slot="rightIcon" className="fas fa-dragon"/>
-    </adesso-input>
+        pattern="1AA1"
+        lang="tr-TR">
+        <i slot="rightIcon" className="fas fa-dragon"/>
+    </div>
   ```
   
 ![](input_field_gif.gif)
@@ -41,7 +40,7 @@ Feel free to make your "Pull Request" 🏆
   | `error-message` | message to show when error occurs | String | false | no |
   | `invalid` | set this as input exptected to be invalid | Boolean | false | no |
   | `label` | label above input field | String | none | no |  
-  | `lang` | language code | String | en-US | yes |
+  | `lang` | language code | String | en-US | no |
   | `maxlength` | maximum number of character enabled | String | none | no |
   | `minlength` | minimum number of character for validation | String | none | no |
   | `pattern` | patter to mask user input "A" for alpha chars "1" for numbers | String | none | no |
