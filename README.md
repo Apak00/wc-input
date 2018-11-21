@@ -18,13 +18,10 @@ Feel free to make your "Pull Request" 🏆
   ```
   then in your markup
   ```
-    <div
-        is="adesso-input"
+    <adesso-input
         required
         type="text"
-        label="label"
-        pattern="1AA1"
-        lang="tr-TR">
+        label="label">
         <i slot="rightIcon" className="fas fa-dragon"/>
     </div>
   ```
