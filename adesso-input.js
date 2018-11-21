@@ -137,7 +137,7 @@ import validator from "validator";
                         labelElementClassList.remove("holdTight");
                         containerClassList.remove("hasText");
                     } else containerClassList.remove("hasText");
-                    if ((!this.invalid || this.invalid === "false") && this.validation(value)) {
+                    if ((!this.invalid) && this.validation(value)) {
                         containerClassList.remove("invalid");
                     } else {
                         containerClassList.add("invalid");
@@ -336,19 +336,27 @@ import validator from "validator";
         }
         
         get invalid() {
-            return this.getAttribute("invalid");
+            return this.hasAttribute('invalid');
         }
         
         set invalid(newValue) {
-            this.setAttribute("invalid", newValue);
+            const invalid = Boolean(newValue);
+            if (invalid)
+                this.setAttribute('invalid', '');
+            else
+                this.removeAttribute('invalid');
         }
         
         get animated() {
-            return this.getAttribute("animated");
+            return this.hasAttribute('animated');
         }
         
         set animated(newValue) {
-            this.setAttribute("animated", newValue);
+            const animated = Boolean(newValue);
+            if (animated)
+                this.setAttribute('animated', '');
+            else
+                this.removeAttribute('animated');
         }
         
         get minlength() {
@@ -368,11 +376,15 @@ import validator from "validator";
         }
         
         get required() {
-            return this.getAttribute("required");
+            return this.hasAttribute('required');
         }
         
         set required(newValue) {
-            this.setAttribute("required", newValue);
+            const required = Boolean(newValue);
+            if (required)
+                this.setAttribute('required', '');
+            else
+                this.removeAttribute('required');
         }
         
         get alpha() {

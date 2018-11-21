@@ -60,3 +60,4 @@ Feel free to make your "Pull Request" 🏆
   - [x] Notify parent component about "errorKey". Possible solition would be firing a custom event
   - [x] Add input mask for custom pattern.
   - [ ] Add more options for pattern and validation.
+  - [ ] Add test, focus on Jest.
