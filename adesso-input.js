@@ -32,12 +32,12 @@ import validator from "validator";
             font-size: 16px;
             transition : transform 200ms, font-size 200ms ease-in;
         }
-        .holdTight {
+        .input:focus + .label {
             color: inherit;
             font-size: 14px;
             transform: translate(0, -25px);
         }
-        .input:focus + .label {
+        .holdTight {
             color: inherit;
             font-size: 14px;
             transform: translate(0, -25px);
@@ -126,6 +126,7 @@ import validator from "validator";
             
             Object.defineProperty(this, "onValidate", {
                 value: (e) => {
+                    e.preventDefault();
                     const value = e.target.value;
                     const containerClassList = this.shadowRoot.querySelector(".container").classList;
                     const labelElementClassList = this.shadowRoot.querySelector(".label").classList;
@@ -148,21 +149,18 @@ import validator from "validator";
             
             Object.defineProperty(this, "onKeyUp", {
                 value: (e) => {
-                    if (this.value === e.target.value) {
-                        e.preventDefault();
-                        return false;
-                    } else if (this.hasAttribute("value")) {
+                    if (this.value !== e.target.value) {
                         const textChanged = new CustomEvent("textChanged", {detail: {value: e.target.value}});
                         this.dispatchEvent(textChanged);
-                    } else {
-                        this.value = e.target.value;
+                        if (!this.hasAttribute("value"))
+                            this.value = e.target.value;
                     }
-                    
-                    
+                    if (this.hasAttribute("value"))
+                        this.value = this.value;
                 }
             });
             
-            Object.defineProperty(this, "onKeyPress", {
+            Object.defineProperty(this, "maskOnKeyPress", {
                 value: (e) => {
                     const value = e.target.value;
                     const valLength = value.length;
@@ -181,15 +179,18 @@ import validator from "validator";
                 }
             });
             
-            Object.defineProperty(this, "onPaste", {
+            Object.defineProperty(this, "maskOnPaste", {
                 value: (e) => {
                     const cb = e.clipboardData.getData("Text");
                     const cbLength = cb.length;
                     const patternLength = this.pattern.length;
                     const valLength = e.target.value.length;
                     
-                    if (cbLength > (patternLength - valLength))
+                    if (cbLength > (patternLength - valLength)) {
                         e.preventDefault();
+                        return false;
+                    }
+                    
                     for (let i = valLength; i < (valLength + cbLength); i++) {
                         const keyCode = cb.charCodeAt(i - valLength);
                         const patternKey = this.pattern.charAt(i);
@@ -228,9 +229,10 @@ import validator from "validator";
             const inputEl = this.shadowRoot.querySelector("input");
             inputEl.addEventListener("blur", this.onValidate);
             inputEl.addEventListener("keyup", this.onKeyUp);
+            inputEl.addEventListener("keypress", this.onKeyPress);
             if (this.pattern) {
-                inputEl.addEventListener("keypress", this.onKeyPress);
-                inputEl.addEventListener("paste", this.onPaste);
+                inputEl.addEventListener("keypress", this.maskOnKeyPress);
+                inputEl.addEventListener("paste", this.maskOnPaste);
             }
         }
         
@@ -269,7 +271,8 @@ import validator from "validator";
             console.log(`${name} changed from ${oldValue} to ${newValue}`);
             switch (name) {
                 case "animated":
-                    this.shadowRoot.querySelector(".label").classList.remove("holdTight");
+                    if (!this.value)
+                        this.shadowRoot.querySelector(".label").classList.remove("holdTight");
                     break;
                 case "label":
                     this.shadowRoot.querySelector(".label").textContent = this.label;
@@ -305,6 +308,8 @@ import validator from "validator";
                     this.shadowRoot.querySelector("input").setAttribute("placeholder", newValue);
                     break;
                 case "value":
+                    if (newValue)
+                        this.shadowRoot.querySelector(".label").classList.add("holdTight");
                     this.shadowRoot.querySelector("input").value = newValue;
                     break;
                 default:
