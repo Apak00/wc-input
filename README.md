@@ -48,6 +48,13 @@ Feel free to make your "Pull Request" 🏆
   | `type` | input type | String | none | yes |
   | `value` | input value for controlled input. event fired on input change is "textChanged" | String | none | no |
   
+  ## Events:
+  
+  | Event | Description | required |
+  | --- | --- | --- |
+  | `errorEvent` | fires with an error key when validation fails you can access key with "event.detail.key"  | no |
+  | `textChanged` | fires with value of input when text changed you can access value with "event.detail.value" | no |
+  
   ## Future:
   
   - [x] Notify parent component about "errorKey". Possible solition would be firing a custom event
