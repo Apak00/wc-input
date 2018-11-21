@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66220fc4-e4f4-4c45-9a2e-89f3f5d6b1ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -49,7 +48,7 @@
         <counts>
           <entry key="js" value="1044" />
           <entry key="json" value="87" />
-          <entry key="md" value="1963" />
+          <entry key="md" value="1978" />
           <entry key="txt" value="16" />
         </counts>
       </usages-collector>
@@ -58,7 +57,7 @@
           <entry key="HTML" value="23" />
           <entry key="JSON" value="87" />
           <entry key="JavaScript" value="1021" />
-          <entry key="Markdown" value="1256" />
+          <entry key="Markdown" value="1271" />
           <entry key="PLAIN_TEXT" value="723" />
         </counts>
       </usages-collector>
@@ -88,8 +87,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="419">
-                <caret line="49" column="12" lean-forward="true" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+              <first_editor relative-caret-position="136">
+                <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
               </first_editor>
               <second_editor />
             </state>
@@ -201,7 +200,7 @@
       <workItem from="1542349048819" duration="3480000" />
       <workItem from="1542607560580" duration="5868000" />
       <workItem from="1542703567625" duration="4627000" />
-      <workItem from="1542780596912" duration="150000" />
+      <workItem from="1542780596912" duration="218000" />
     </task>
     <task id="LOCAL-00001" summary="s">
       <created>1542012340957</created>
@@ -284,13 +283,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34854000" />
+    <option name="totallyTimeSpent" value="34922000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49522293" visible="true" weight="0.1726568" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49522293" visible="true" weight="0.1726568" />
       <window_info id="Structure" order="1" sideWeight="0.5047771" side_tool="true" weight="0.24947146" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -302,7 +301,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.23614457" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.23614457" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -341,8 +340,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="419">
-            <caret line="49" column="12" lean-forward="true" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+          <first_editor relative-caret-position="136">
+            <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           </first_editor>
           <second_editor />
         </state>

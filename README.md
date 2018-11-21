@@ -21,7 +21,8 @@ Feel free to make your "Pull Request" 🏆
     <adesso-input
         required
         type="text"
-        label="label">
+        label="label"
+        minlength="5">
         <i slot="rightIcon" className="fas fa-dragon"/>
     </div>
   ```
