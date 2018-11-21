@@ -27,6 +27,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="gif" value="1" />
           <entry key="js" value="4" />
           <entry key="json" value="2" />
           <entry key="md" value="2" />
@@ -35,7 +36,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Image" value="5" />
+          <entry key="Image" value="6" />
           <entry key="JSON" value="2" />
           <entry key="JavaScript" value="4" />
           <entry key="Markdown" value="1" />
@@ -66,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adesso-input.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4089">
-              <caret line="432" selection-start-line="432" selection-end-line="432" />
+            <state relative-caret-position="349">
+              <caret line="362" column="25" lean-forward="true" selection-end-line="430" />
             </state>
           </provider>
         </entry>
@@ -79,6 +80,11 @@
               <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input_field_gif.gif">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -202,7 +208,7 @@
       <workItem from="1542349048819" duration="3480000" />
       <workItem from="1542607560580" duration="5868000" />
       <workItem from="1542703567625" duration="4627000" />
-      <workItem from="1542780596912" duration="3468000" />
+      <workItem from="1542780596912" duration="4664000" />
     </task>
     <task id="LOCAL-00001" summary="s">
       <created>1542012340957</created>
@@ -285,7 +291,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38172000" />
+    <option name="totallyTimeSpent" value="39368000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -347,10 +353,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/input_field_gif.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/adesso-input.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4089">
-          <caret line="432" selection-start-line="432" selection-end-line="432" />
+        <state relative-caret-position="349">
+          <caret line="362" column="25" lean-forward="true" selection-end-line="430" />
         </state>
       </provider>
     </entry>

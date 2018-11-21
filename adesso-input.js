@@ -137,8 +137,7 @@ import validator from "validator";
                         labelElementClassList.remove("holdTight");
                         containerClassList.remove("hasText");
                     } else containerClassList.remove("hasText");
-                    
-                    if (!this.invalid && this.validation(value)) {
+                    if ((!this.invalid || this.invalid === "false") && this.validation(value)) {
                         containerClassList.remove("invalid");
                     } else {
                         containerClassList.add("invalid");
@@ -153,7 +152,7 @@ import validator from "validator";
                         const textChanged = new CustomEvent("textChanged", {detail: {value: e.target.value}});
                         this.dispatchEvent(textChanged);
                     }
-                    if (this.hasAttribute("value")){
+                    if (this.hasAttribute("value")) {
                         this.value = this.value;
                     }
                 }
