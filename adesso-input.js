@@ -152,11 +152,10 @@ import validator from "validator";
                     if (this.value !== e.target.value) {
                         const textChanged = new CustomEvent("textChanged", {detail: {value: e.target.value}});
                         this.dispatchEvent(textChanged);
-                        if (!this.hasAttribute("value"))
-                            this.value = e.target.value;
                     }
-                    if (this.hasAttribute("value"))
+                    if (this.hasAttribute("value")){
                         this.value = this.value;
+                    }
                 }
             });
             
@@ -229,7 +228,6 @@ import validator from "validator";
             const inputEl = this.shadowRoot.querySelector("input");
             inputEl.addEventListener("blur", this.onValidate);
             inputEl.addEventListener("keyup", this.onKeyUp);
-            inputEl.addEventListener("keypress", this.onKeyPress);
             if (this.pattern) {
                 inputEl.addEventListener("keypress", this.maskOnKeyPress);
                 inputEl.addEventListener("paste", this.maskOnPaste);
