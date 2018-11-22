@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "webpack --mode='development'",
-    "publish": "webpack --mode='production' && git add . && git commit -m 'classic comment' && git push && npm version patch && npm publish"
+    "yolo": "webpack --mode='production' && git add . && git commit -m 'classic comment' && git push && npm version patch && npm publish"
   },
   "peerDependencies": {
     "validator": "^10.9.0"
