@@ -2,7 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66220fc4-e4f4-4c45-9a2e-89f3f5d6b1ce" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/core/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/core/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/preset-env/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/preset-env/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/babel-loader/node_modules/find-cache-dir/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/babel-loader/node_modules/find-cache-dir/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/babel-loader/node_modules/find-cache-dir/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/babel-loader/node_modules/find-cache-dir/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/babel-loader/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/babel-loader/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/find-cache-dir/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/license" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/find-cache-dir/license" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/find-up/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/find-up/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/find-up/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/find-up/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/locate-path/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/locate-path/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/locate-path/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/locate-path/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/p-limit/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/p-limit/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/p-limit/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/p-limit/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/p-locate/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/p-locate/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/p-locate/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/p-locate/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/p-try/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/p-try/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/p-try/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/p-try/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/pkg-dir/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/pkg-dir/license" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/pkg-dir/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/node_modules/pkg-dir/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/find-cache-dir/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/find-cache-dir/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/find-cache-dir/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/webpack/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/webpack/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,8 +92,8 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="312" />
-          <entry key="js" value="1946" />
-          <entry key="json" value="399" />
+          <entry key="js" value="1948" />
+          <entry key="json" value="440" />
           <entry key="md" value="2256" />
           <entry key="npmignore" value="41" />
           <entry key="txt" value="16" />
@@ -61,8 +102,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="335" />
-          <entry key="JSON" value="399" />
-          <entry key="JavaScript" value="1923" />
+          <entry key="JSON" value="440" />
+          <entry key="JavaScript" value="1925" />
           <entry key="Markdown" value="1549" />
           <entry key="PLAIN_TEXT" value="764" />
         </counts>
@@ -96,7 +137,7 @@
         <entry file="file://$PROJECT_DIR$/dist/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="16693" lean-forward="true" selection-start-column="16693" selection-end-column="16693" />
+              <caret column="49" selection-start-column="49" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -109,8 +150,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+            <state relative-caret-position="300">
+              <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -127,8 +168,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+            <state relative-caret-position="210">
+              <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -145,8 +186,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="124" column="20" selection-start-line="124" selection-start-column="20" selection-end-line="124" selection-end-column="20" />
+            <state relative-caret-position="148">
+              <caret line="122" column="43" lean-forward="true" selection-start-line="122" selection-start-column="43" selection-end-line="122" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -181,6 +222,8 @@
       <find>console.log</find>
       <find>export</find>
       <find>class</find>
+      <find>&quot;ali&quot;</find>
+      <find>...</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -199,9 +242,9 @@
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/dist/index.html" />
         <option value="$PROJECT_DIR$/dist/webpack.config.babel.js" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/babelrc..js" />
         <option value="$PROJECT_DIR$/.npmignore" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/index.js" />
       </list>
@@ -304,7 +347,7 @@
       <workItem from="1542703567625" duration="4627000" />
       <workItem from="1542780596912" duration="9642000" />
       <workItem from="1542867420682" duration="1866000" />
-      <workItem from="1542886095986" duration="6328000" />
+      <workItem from="1542886095986" duration="7196000" />
     </task>
     <task id="LOCAL-00001" summary="s">
       <created>1542012340957</created>
@@ -387,7 +430,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52540000" />
+    <option name="totallyTimeSpent" value="53408000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -487,13 +530,6 @@
     <entry file="file://$PROJECT_DIR$/dist/webpack.config.babel.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/babelrc.">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -502,9 +538,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.npmignore">
@@ -521,24 +554,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="16693" lean-forward="true" selection-start-column="16693" selection-end-column="16693" />
+          <caret column="49" selection-start-column="49" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="124" column="20" selection-start-line="124" selection-start-column="20" selection-end-line="124" selection-end-column="20" />
+        <state relative-caret-position="148">
+          <caret line="122" column="43" lean-forward="true" selection-start-line="122" selection-start-column="43" selection-end-line="122" selection-end-column="43" />
         </state>
       </provider>
     </entry>

@@ -5,7 +5,7 @@
   "main": "./dist/main.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack --mode='development'",
+    "build": "webpack --mode='development' && open ./dist/index.html",
     "yolo": "webpack --mode='production' && git add . && git commit -m 'classic comment' && git push && npm version patch && npm publish"
   },
   "peerDependencies": {

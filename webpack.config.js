@@ -8,11 +8,13 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.js/,
-            exclude: /node_modules/,
-            use: [{
-                loader: 'babel-loader'
-            }]
+            test: /\.m?js$/,
+            exclude: /(node_modules|bower_components)/,
+            loader: 'babel-loader',
+            options: {
+                presets: ['@babel/preset-env'],
+                plugins: ['@babel/plugin-proposal-object-rest-spread']
+            }
         }]
     },
 };

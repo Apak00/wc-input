@@ -123,9 +123,6 @@ import validator from "validator";
     class AdessoInput extends HTMLElement {
         constructor() {
             super();
-            let [kylo, loren, ...rest] = ["ali", "veli", "chriss"];
-            console.log(kylo, loren, rest);
-            
             Object.defineProperty(this, "onValidate", {
                 value: (e) => {
                     e.preventDefault();
