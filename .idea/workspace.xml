@@ -51,7 +51,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="312" />
-          <entry key="js" value="1913" />
+          <entry key="js" value="1946" />
           <entry key="json" value="399" />
           <entry key="md" value="2256" />
           <entry key="npmignore" value="41" />
@@ -62,7 +62,7 @@
         <counts>
           <entry key="HTML" value="335" />
           <entry key="JSON" value="399" />
-          <entry key="JavaScript" value="1890" />
+          <entry key="JavaScript" value="1923" />
           <entry key="Markdown" value="1549" />
           <entry key="PLAIN_TEXT" value="764" />
         </counts>
@@ -96,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/dist/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="16940" selection-start-column="16935" selection-end-column="16940" />
+              <caret column="16693" lean-forward="true" selection-start-column="16693" selection-end-column="16693" />
             </state>
           </provider>
         </entry>
@@ -145,8 +145,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="127" column="12" selection-start-line="127" selection-start-column="12" selection-end-line="127" selection-end-column="12" />
+            <state relative-caret-position="135">
+              <caret line="124" column="20" selection-start-line="124" selection-start-column="20" selection-end-line="124" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -304,7 +304,7 @@
       <workItem from="1542703567625" duration="4627000" />
       <workItem from="1542780596912" duration="9642000" />
       <workItem from="1542867420682" duration="1866000" />
-      <workItem from="1542886095986" duration="6146000" />
+      <workItem from="1542886095986" duration="6328000" />
     </task>
     <task id="LOCAL-00001" summary="s">
       <created>1542012340957</created>
@@ -387,7 +387,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52358000" />
+    <option name="totallyTimeSpent" value="52540000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -531,14 +531,14 @@
     <entry file="file://$PROJECT_DIR$/dist/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="16940" selection-start-column="16935" selection-end-column="16940" />
+          <caret column="16693" lean-forward="true" selection-start-column="16693" selection-end-column="16693" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="127" column="12" selection-start-line="127" selection-start-column="12" selection-end-line="127" selection-end-column="12" />
+        <state relative-caret-position="135">
+          <caret line="124" column="20" selection-start-line="124" selection-start-column="20" selection-end-line="124" selection-end-column="20" />
         </state>
       </provider>
     </entry>
