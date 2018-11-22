@@ -2,7 +2,6 @@
   "name": "adesso-input",
   "version": "0.0.14",
   "description": "",
-  "private": true,
   "main": "./dist/main.js",
   "scripts": {
     "test": "jest",
