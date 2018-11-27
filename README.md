@@ -1,7 +1,6 @@
 # adesso-input
-A Web Component for input field.
 
-Feel free to make your "Pull Request" 🏆
+A Web Component for input field.
 
   ### installation:
   `npm install adesso-input --save`
@@ -55,6 +54,10 @@ Feel free to make your "Pull Request" 🏆
   | `errorEvent` | fires with an error key when validation fails you can access key with "event.detail.key"  | no |
   | `textChanged` | fires with value of input when text changed you can access value with "event.detail.value" | no |
   
+  ## Contributing:
+  
+  Feel free to make your "Pull Request" 🏆
+
   ## Future:
   
   - [x] Notify parent component about "errorKey". Possible solition would be firing a custom event
