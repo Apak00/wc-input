@@ -1,5 +1,6 @@
 import validator from "validator";
 
+
 (function () {
     const inputTemplate = document.createElement("template");
     inputTemplate.innerHTML = `
@@ -436,5 +437,10 @@ import validator from "validator";
         
     }
     
-    customElements.define("adesso-input", AdessoInput)
+    customElements.define("adesso-input", AdessoInput);
+    module.exports = AdessoInput;
 }());
+
+export function sub(a, b) {
+    return a - b;
+}
