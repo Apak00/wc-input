@@ -438,9 +438,5 @@ import validator from "validator";
     }
     
     customElements.define("adesso-input", AdessoInput);
-    module.exports = AdessoInput;
 }());
 
-export function sub(a, b) {
-    return a - b;
-}
