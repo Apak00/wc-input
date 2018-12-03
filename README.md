@@ -54,6 +54,8 @@ A Web Component for input field.
   | `errorEvent` | fires with an error key when validation fails you can access key with "event.detail.key"  | no |
   | `textChanged` | fires with value of input when text changed you can access value with "event.detail.value" | no |
   
+  ![](angular_react_vue.gif)
+  
   ## Contributing:
   
   Feel free to make your "Pull Request" 🏆
