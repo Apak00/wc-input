@@ -65,4 +65,4 @@ A Web Component for input field.
   - [x] Notify parent component about "errorKey". Possible solition would be firing a custom event
   - [x] Add input mask for custom pattern.
   - [ ] Add more options for pattern and validation.
-  - [ ] Add test, focus on Jest.
+  - [ ] Add testing.
