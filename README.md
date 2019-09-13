@@ -23,7 +23,7 @@ A Web Component for input field.
         label="label"
         minlength="5">
         <i slot="rightIcon" className="fas fa-dragon"/>
-    </div>
+    </adesso-input>
   ```
   
 ![](input_field_gif.gif)
