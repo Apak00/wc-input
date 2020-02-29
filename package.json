@@ -1,12 +1,12 @@
 {
-  "name": "adesso-input",
+  "name": "wc-test-input",
   "version": "0.0.26",
   "description": "",
   "main": "./dist/main.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack --mode='development' && open ./dist/index.html",
-    "yolo": "webpack --mode='production' && git add . && git commit -m 'classic comment' && git push && npm version patch && npm publish"
+    "build": "webpack --mode=development",
+    "yolo": "webpack --mode=production && git add . && git commit -m 'classic' && git push && npm version patch && npm publish"
   },
   "peerDependencies": {
     "validator": "^10.9.0"
