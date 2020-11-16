@@ -1,4 +1,4 @@
-# adesso-input
+# input field
 
 A Web Component for input field.
 
