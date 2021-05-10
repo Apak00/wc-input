@@ -3,7 +3,7 @@
 A Web Component for input field.
 
   ### installation:
-  `npm install adesso-input --save`
+  `npm i wc-test-input`
 
   To use this web component, you need to install "validator.js" aswell. If you dont already have it
 
@@ -13,17 +13,17 @@ A Web Component for input field.
   first import script to your page
 
   ```
-    import "adesso-input";
+    import "wc-test-input";
   ```
   then in your markup
   ```
-    <adesso-input
+    <wc-test-input
         required
         type="text"
         label="label"
         minlength="5">
         <i slot="rightIcon" className="fas fa-dragon"/>
-    </adesso-input>
+    </wc-test-input>
   ```
   
 ![](input_field_gif.gif)
