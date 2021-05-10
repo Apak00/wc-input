@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "webpack --mode=development",
+    "dist": "webpack --mode=production",
     "yolo": "webpack --mode=production && git add . && git commit -m 'classic' && git push && npm version patch && npm publish"
   },
   "peerDependencies": {

@@ -119,9 +119,9 @@ import validator from "validator";
         <slot class="rightIcon" name="rightIcon"></slot>
     </div>
     `;
-    
-    
-    class AdessoInput extends HTMLElement {
+
+
+    class WCInput extends HTMLElement {
         constructor() {
             super();
             Object.defineProperty(this, "onValidate", {
@@ -145,11 +145,11 @@ import validator from "validator";
                     }
                 }
             });
-            
+
             Object.defineProperty(this, "onKeyUp", {
                 value: (e) => {
                     if (this.value !== e.target.value) {
-                        const textChanged = new CustomEvent("textChanged", {detail: {value: e.target.value}});
+                        const textChanged = new CustomEvent("textChanged", { detail: { value: e.target.value } });
                         this.dispatchEvent(textChanged);
                     }
                     if (this.hasAttribute("value")) {
@@ -157,7 +157,7 @@ import validator from "validator";
                     }
                 }
             });
-            
+
             Object.defineProperty(this, "maskOnKeyPress", {
                 value: (e) => {
                     const value = e.target.value;
@@ -165,7 +165,7 @@ import validator from "validator";
                     const key = e.key;
                     const keyCode = e.which || e.keyCode;
                     const patternKey = this.pattern.charAt(valLength);
-                    
+
                     if (patternKey === "A" && !validator.isAlpha(key, this.lang)) {
                         e.preventDefault();
                         return false;
@@ -176,23 +176,23 @@ import validator from "validator";
                     }
                 }
             });
-            
+
             Object.defineProperty(this, "maskOnPaste", {
                 value: (e) => {
                     const cb = e.clipboardData.getData("Text");
                     const cbLength = cb.length;
                     const patternLength = this.pattern.length;
                     const valLength = e.target.value.length;
-                    
+
                     if (cbLength > (patternLength - valLength)) {
                         e.preventDefault();
                         return false;
                     }
-                    
+
                     for (let i = valLength; i < (valLength + cbLength); i++) {
                         const keyCode = cb.charCodeAt(i - valLength);
                         const patternKey = this.pattern.charAt(i);
-                        
+
                         if (patternKey === "A" && !validator.isAlpha(cb[i - valLength], this.lang)) {
                             e.preventDefault();
                             return false;
@@ -204,25 +204,25 @@ import validator from "validator";
                     }
                 }
             });
-            
+
             Object.defineProperty(this, "validationRules", {
                 configurable: true,
                 enumerable: true,
                 writable: true,
                 value: [],
             });
-            
-            this.attachShadow({mode: "open"});
-            
+
+            this.attachShadow({ mode: "open" });
+
             this.init();
         }
-        
-        
+
+
         init() {
             const inputCopy = document.importNode(inputTemplate, true).content;
             this.shadowRoot.appendChild(inputCopy);
         }
-        
+
         connectedCallback() {
             const inputEl = this.shadowRoot.querySelector("input");
             inputEl.addEventListener("blur", this.onValidate);
@@ -232,7 +232,7 @@ import validator from "validator";
                 inputEl.addEventListener("paste", this.maskOnPaste);
             }
         }
-        
+
         validation(value) {
             let errorKey = undefined;
             let shouldError = this.validationRules.some(rule => {
@@ -243,7 +243,7 @@ import validator from "validator";
                     case (rule === "email" && !validator.isEmail(value)):
                         errorKey = "email";
                         return true;
-                    case (rule === "minlength" && !validator.isLength(value, {min: this.minlength})):
+                    case (rule === "minlength" && !validator.isLength(value, { min: this.minlength })):
                         errorKey = "minlength";
                         return true;
                     case (rule === "alpha" && !validator.isAlpha(value, this.lang)):
@@ -256,14 +256,14 @@ import validator from "validator";
                         return false;
                 }
             });
-            
-            const errorEvent = new CustomEvent("errorEvent", {detail: {key: errorKey}});
+
+            const errorEvent = new CustomEvent("errorEvent", { detail: { key: errorKey } });
             this.dispatchEvent(errorEvent);
-            
+
             return !shouldError;
         }
-        
-        
+
+
         attributeChangedCallback(name, oldValue, newValue) {
             console.log(`${name} changed from ${oldValue} to ${newValue}`);
             switch (name) {
@@ -313,32 +313,32 @@ import validator from "validator";
                     break;
             }
         }
-        
+
         static get observedAttributes() {
             return ["alpha", "animated", "error-message", "invalid", "label", "lang", "minlength", "maxlength",
                 "pattern", "placeholder", "regex", "required", "type", "value",];
         }
-        
+
         get label() {
             return this.getAttribute("label");
         }
-        
+
         set label(newValue) {
             this.setAttribute("label", newValue);
         }
-        
+
         get type() {
             return this.getAttribute("type");
         }
-        
+
         set type(newValue) {
             this.setAttribute("type", newValue);
         }
-        
+
         get invalid() {
             return this.hasAttribute('invalid');
         }
-        
+
         set invalid(newValue) {
             const invalid = Boolean(newValue);
             if (invalid)
@@ -346,11 +346,11 @@ import validator from "validator";
             else
                 this.removeAttribute('invalid');
         }
-        
+
         get animated() {
             return this.hasAttribute('animated');
         }
-        
+
         set animated(newValue) {
             const animated = Boolean(newValue);
             if (animated)
@@ -358,27 +358,27 @@ import validator from "validator";
             else
                 this.removeAttribute('animated');
         }
-        
+
         get minlength() {
             return this.getAttribute("minlength");
         }
-        
+
         set minlength(newValue) {
             this.setAttribute("minlength", newValue);
         }
-        
+
         get maxlength() {
             return this.getAttribute("maxlength");
         }
-        
+
         set maxlength(newValue) {
             this.setAttribute("maxlength", newValue);
         }
-        
+
         get required() {
             return this.hasAttribute('required');
         }
-        
+
         set required(newValue) {
             const required = Boolean(newValue);
             if (required)
@@ -386,57 +386,57 @@ import validator from "validator";
             else
                 this.removeAttribute('required');
         }
-        
+
         get alpha() {
             return this.getAttribute("alpha");
         }
-        
+
         set alpha(newValue) {
             this.setAttribute("alpha", newValue);
         }
-        
+
         get regex() {
             return this.getAttribute("regex");
         }
-        
+
         set regex(newValue) {
             this.setAttribute("regex", newValue);
         }
-        
+
         get value() {
             return this.getAttribute("value");
         }
-        
+
         set value(newValue) {
             this.setAttribute("value", newValue);
         }
-        
+
         get lang() {
             return this.getAttribute("lang");
         }
-        
+
         set lang(newValue) {
             this.setAttribute("lang", newValue);
         }
-        
+
         get pattern() {
             return this.getAttribute("pattern");
         }
-        
+
         set pattern(newValue) {
             this.setAttribute("pattern", newValue);
         }
-        
+
         get placeholder() {
             return this.getAttribute("placeholder");
         }
-        
+
         set placeholder(newValue) {
             this.setAttribute("placeholder", newValue);
         }
-        
+
     }
-    
-    customElements.define("adesso-input", AdessoInput);
+
+    customElements.define("wc-test-input", WCInput);
 }());
 
